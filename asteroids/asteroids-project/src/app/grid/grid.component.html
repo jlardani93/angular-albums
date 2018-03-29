@@ -1,0 +1,8 @@
+<input type="text" (keydown)="onKeyDown($event)" maxLength="0">
+<br>
+<div [ngStyle]="renderGridContainer()">
+  <div *ngFor="let row of grid; let i = index" [attr.data-index]="i">
+    <div *ngFor="let square of row; let j = index" [attr.data-index]="j" [ngStyle]="renderSquare(i, j)">
+    </div>
+  </div>
+</div>
